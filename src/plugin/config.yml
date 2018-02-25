@@ -1,0 +1,31 @@
+## YAML Template.
+---
+package:
+    author: Erik Pearson
+    name: ui-diagnostics
+    description: A  plugin for exposing diagnostic information from the ui runtime.
+source:
+    styles:
+        -
+            file: styles.css
+install:
+    widgets:
+        -
+            id: ui-diagnostics_panel
+            module: panel
+            type: factory
+    routes:
+        -
+            path: [ui-diagnostics]
+            queryParams: 
+                param1: {}
+            widget: ui-diagnostics_panel
+            authorization: true
+    menu:
+        -
+            name: ui-diagnostics
+            definition:
+                path: [ui-diagnostics]
+                label: UI Diagnostics
+                icon: flask
+        
